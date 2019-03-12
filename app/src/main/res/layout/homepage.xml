@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/testBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/camera_2" />
+
+        <TextView
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="Gram"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="30dp" />
+
+        <ImageButton
+            android:id="@+id/broadCast"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/streaming_2" />
+
+        <ImageButton
+            android:id="@+id/homeChatBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/message_2" />
+    </LinearLayout>
+
+    <com.example.jang.application1.Horizontal.HorizontalListView
+        android:id="@+id/LiveStreaming"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+
+    </com.example.jang.application1.Horizontal.HorizontalListView>
+    <ListView
+        android:id="@+id/feedListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

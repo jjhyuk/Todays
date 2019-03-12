@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jang.application1">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <uses-feature android:name="android.hardware.camera2.full"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"
+        />
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.jang.application1"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".login.login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.SignupPage" />
+        <activity android:name=".MenuPage" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity android:name=".facebookSingUp" />
+        <activity android:name=".Home" />
+        <activity android:name=".custumGallery" />
+
+        <activity android:name=".Post" />
+        <activity android:name=".Freinds_search" />
+        <activity android:name=".chatList" />
+        <activity android:name=".otherPage" />
+        <activity android:name=".chatroom" />
+        <activity android:name=".comment" />
+
+
+        <activity android:name=".WebRtc.RtcActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullUser"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <data android:scheme="http"
+                    android:host="@string/host" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TEST.Test_Broad"></activity>
+        <activity
+            android:name=".Streaming.StreamingView"
+            ></activity>
+        <activity android:name=".Token.wallet_info"></activity>
+        <activity android:name=".Token.gift_wallet"></activity>
+
+        <activity android:name=".Streaming.rtmpStreaming">
+
+        </activity>
+        <activity android:name=".Posting.EditImageActivity"></activity>
+        <activity android:name=".Vod_watching">
+        </activity>
+        <activity android:name=".vod_chart"></activity>
+    </application>
+
+</manifest>

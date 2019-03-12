@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/checkVod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내 영상 확인하기"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <GridView
+        android:id="@+id/vod_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="10dp"
+
+
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp" />
+</LinearLayout>
